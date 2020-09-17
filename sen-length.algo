@@ -1,0 +1,45 @@
+ALGORITHM read_sentence1
+VAR
+    sen: string;
+    i, len, wordCount, vowels : integer :=0;
+BEGIN
+  read(sen);
+  WHILE (sen[length-1]=".") DO
+   len := length(sen);
+   FOR i FROM 0 TO sen[length-1] STEP i++  DO
+    SWITCH (sen[i]) DO
+      case 1 : IF (sen[i]=" ") THEN
+        wordCount:= wordCount + 1;
+        BREAK;
+      END_IF
+      case 2 : IF (sen[i]="a") THEN
+        vowels := vowels + 1;
+        BREAK;
+      END_IF
+      case 3 : IF (sen[i]="e") THEN
+        vowels := vowels + 1;
+        BREAK;
+      END_IF 
+      case 4 : IF (sen[i]="i") THEN
+        vowels := vowels + 1;
+        BREAK;
+      END_IF
+      case 5 : IF (sen[i]="o") THEN
+        vowels := vowels + 1;
+        BREAK;
+      END_IF
+      case 6 : IF (sen[i]="u") THEN
+        vowels := vowels + 1;
+        BREAK;
+      END_IF
+      case 7 : IF (sen[i]="y") THEN
+        vowels := vowels + 1;
+        BREAK;
+      END_IF
+    END_SWITCH
+    END_FOR
+  END_WHILE
+write(len);
+write(wordCount+1);
+write(vowels);
+END
